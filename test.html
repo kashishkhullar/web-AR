@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene background="color: #3CF">
+	  <a-assets>
+	    <a-asset-item id="donut-obj" src="/donut/model.obj"></a-asset-item>
+	    <a-asset-item id="donut-mtl" src="/donut/materials.mtl"></a-asset-item>
+	    <a-asset-item id="bday-cake-obj" src="/bday-cake/model.obj"></a-asset-item>
+	    <a-asset-item id="bday-cake-mtl" src="/bday-cake/materials.mtl"></a-asset-item>
+	    <a-asset-item id="wedding-cake-obj" src="/wedding-cake/model.obj"></a-asset-item>
+	    <a-asset-item id="wedding-cake-mtl" src="/wedding-cake/materials.mtl"></a-asset-item>
+	    <a-asset-item id="coffee-obj" src="/coffee/model.obj"></a-asset-item>
+	    <a-asset-item id="coffee-mtl" src="/coffee/materials.mtl"></a-asset-item>
+	    <a-mixin id="text"
+          text="align: center; width: 6; color:blue; font: https://cdn.aframe.io/fonts/Roboto-msdf.json;
+               value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
+        ></a-mixin>
+	  </a-assets>
+	    <a-obj-model id="donut" src="#donut-obj" mtl="#donut-mtl" position='-1 0.5 -3'  visible="false" ></a-obj-model>
+        <a-entity rotation="-90 0 0">
+        </a-entity>
+        <a-obj-model id="wedding-cake" src="#wedding-cake-obj"  visible="false" mtl="#wedding-cake-mtl" position='-1 0.5 -3'></a-obj-model>
+        <a-entity rotation="-90 0 0">
+            <a-entity  particle-system="preset: default; color:#f9e154; accelerationValue: 0, -10, 0; particleCount: 3000; direction: -1; rotationAxis: z; rotation:-90, 0 0"></a-entity>
+        </a-entity>
+        <a-obj-model id="bday-cake" src="#bday-cake-obj" mtl="#bday-cake-mtl"  visible="false" position='-1 0.5 -3'></a-obj-model>
+        <a-entity rotation="-90 0 0">
+            <a-entity particle-system="preset: default; color:#f9e154; accelerationValue: 0, -10, 0; particleCount: 3000; direction: -1; rotationAxis: z; rotation:-90, 0 0"></a-entity>
+        </a-entity>
+        <a-obj-model id="coffee" src="#coffee-obj" mtl="#coffee-mtl"  position='-1 0.5 -3' visible="false"></a-obj-model>
+        <a-entity rotation="-90 0 0">
+            <a-entity  particle-system="preset: default; color:#f9e154; accelerationValue: 0, -10, 0; particleCount: 3000; direction: -1; rotationAxis: z; rotation:-90, 0 0"></a-entity>
+        </a-entity>
+	  <a-text mixin="text" position="-3 0 0" wrap-count="20"></a-text>
+      <a-text mixin="text" position="-3 2 0" wrap-count="30"></a-text>
+      <a-text mixin="text" position="-3 3 0" wrap-count="40"></a-text>
+      <a-text mixin="text" position="-3 3.5 0" wrap-count="50"></a-text>
+      <a-text mixin="text" position="-3 4 0" wrap-count="60"></a-text>
+      <a-text mixin="text" position="-3 4.5 0" wrap-count="70"></a-text>
+      <a-text mixin="text" position="-3 5 0" wrap-count="80"></a-text>
+    </a-scene>
+</body>
+</html>
