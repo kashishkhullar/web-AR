@@ -25,9 +25,10 @@
 		  </a-assets>
 
         <a-marker preset='hiro'>
+        <a-entity scale="0.5 1 0.5">
         		<a-sound src="#bday" autoplay="true" position="2 2 2" loop="true"></a-sound>
                 <a-entity rotation="-120 0 0">
-                <a-entity position="0 -7 -15" particle-system="preset: default; color:#f9e154; accelerationValue: 0, -10, 0; particleCount: 3000; direction: -1; rotationAxis: z; rotation:-90, 0 0"></a-entity>
+                <a-entity position="0 -7 -15" particle-system="preset: default; color:#f9e154; accelerationValue: 0, -10, 0; particleCount: 2000; direction: -1; rotationAxis: z; rotation:-90, 0 0"></a-entity>
             </a-entity>
 		<a-entity font="https://cdn.aframe.io/fonts/Roboto-msdf.json">
          <a-entity rotation="-90 0 0" scale="1 1 1">
@@ -77,11 +78,11 @@
           </a-entity>
           <a-entity rotation="-90 0 0">
 	         <a-obj-model id="wedding-cake" src="#wedding-cake-obj"  mtl="#wedding-cake-mtl" position='0 2 2' scale="1 1 1"></a-obj-model>
-	         <a-obj-model id="donut" src="#donut-obj" mtl="#donut-mtl" position='-1.5 0 2'  rotation="90 0 0" scale="2 2 2"></a-obj-model>
-	         <a-obj-model id="pizza" src="#pizza-obj" mtl="#pizza-mtl"  position='0 0 2' scale="2 2 2" rotation="20 0 0"></a-obj-model>
+	         <a-obj-model id="donut" src="#donut-obj" mtl="#donut-mtl" position='-1.5 -0.5 2'  rotation="90 0 0" scale="2 2 2"></a-obj-model>
+	         <a-obj-model id="pizza" src="#pizza-obj" mtl="#pizza-mtl"  position='0 -0.5 2' scale="2 2 2" rotation="20 0 0"></a-obj-model>
 	         <a-obj-model id="coffee" src="#coffee-obj" mtl="#coffee-mtl"  position='1.5 0 2' scale="2 2 2"></a-obj-model>
 	      </a-entity>
-
+</a-entity>
             </a-marker>
 	</a-scene>
 
